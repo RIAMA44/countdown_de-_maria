@@ -1,0 +1,138 @@
+
+* { /*ça s'applique à toute la page.*/
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	background : #F2F2F2;
+	font-family: roboto, sans-serif;
+	font-weight: bold;
+
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
+	justify-content: space-between; /*=>pour écarter les 3 div;*/
+}
+
+header{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 20vh;
+	background: #EB5757;
+	text-align: center;
+
+
+}
+
+header > #p_header1{ /*Mettre header au début comme parent*/
+	font-size: 18px;
+	padding-bottom: 5vh;
+}
+
+header > #p_header2{
+	font-size: 14px;
+}
+
+p {
+	color: white;	
+}
+
+
+h3{
+	text-align: center;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 40px;
+	line-height: 70px;
+	color: #000000;
+}
+
+.Rectanglecentral{
+	background: white;
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	width: 30%;
+	margin: auto;
+}
+
+.colonnebleu{
+	display: flex;
+	flex-direction: column;
+	background: #2F80ED;
+	width:30%;
+}
+
+.colonneblanche{
+	display: flex;
+	flex-direction: column;
+	flex: 1;  /*quand on l'enlève les chiffres ne sont plus au centre - à voir à quoi ça correspond vraiment */
+	background: white;
+
+}
+
+footer{
+	display:flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	background: #2F80ED;
+	height: 97px;
+	margin-top: 20px;
+}
+
+#text_footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-right: 5vh; /*c'est une valeure relative (1Vh = 1/100 de la hauteur de mon écran)*/
+}
+
+.p_footer{
+	text-align: right;
+}
+
+#img_footer {
+	padding: 2vh;
+	height: 90%;
+	width: auto;
+}
+
+@media screen and (min-width: 320px) and  (max-width: 800px) {
+
+html,body /*On part de l'écran PC vers le Mobile*/
+{ 
+max-width: 632px;
+margin: 0px;
+}
+
+header {
+ display:block;
+ clear:both;
+ max-height: 149px;
+ padding-top: 20px;
+}
+
+footer{
+flex-direction: row-reverse;
+justify-content: space-between;
+}
+
+#img_footer {
+height: 100%;
+width:auto;
+margin: 2px;
+}
+
+.Rectanglecentral{
+width: 90%;
+}
+
+}
